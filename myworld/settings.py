@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.25','temp638089.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.25','https://django-project-wbi4.onrender.com']
 
 
 # Application definition
