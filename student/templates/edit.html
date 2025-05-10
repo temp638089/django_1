@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+        <div id="d1" class="pt-4">
+        <div class="overflow-auto rounded-3 shadow-lg mx-4">
+        <table class="table mb-0 table-hover">
+        <thead><tr><th>Name</th><th>Email</th><th>Grade</th><th>Mark</th><th>Department</th><th>Edit</th></tr></thead>
+         {% for x in mymem %}
+         <tr class="bg-warning">
+             <td>
+                <span>
+                {% if x.image %}
+                <img src="{{ x.image.url }}" 
+                alt="{{ x.name }} Profile" 
+                width="100" 
+                height="100"
+                style="object-fit: cover; height: 100px;"
+                loading="lazy">
+                {% else %}
+                    <span class="text-muted"><i class="fas fa-user-slash"></i> No photo</span>
+                {% endif %}
+                </span>{{ x.name }}
+             </td>
+             <td>{{ x.email }}</td>
+             <td>{{ x.grade }}</td>
+             <td>{{ x.mark }}</td>
+             <td>{{ x.deaprtment }}</td>
+             <td><a href="{% url 'edit' x.id %}">Edit</a></td>
+         </tr>
+         {% endfor %}
+        </table>
+        </div>
+        </div>
+</body>
+{% endblock %}

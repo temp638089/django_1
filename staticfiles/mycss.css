@@ -1,0 +1,89 @@
+/* Default styles */
+header {
+    text-align: center;
+    background-color: aqua;
+    padding: 2% 0;
+}
+
+#d1 {
+    background-color: antiquewhite;
+    padding-bottom: 100%;
+    margin-top: 2%;
+    
+}
+
+footer {
+    background-color: azure;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    margin-left: auto; /* Align nav to the right */
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center buttons on smaller screens */
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+#s1 {
+    display: none;
+}
+
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkolivegreen;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Reduce font size for smaller screens */
+    }
+
+    nav {
+        margin-left: 0; /* Reset margin for smaller screens */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons */
+        padding: 10px 20px; /* Adjust padding */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+  }
+

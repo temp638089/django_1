@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <br>
+    <div id="d1" >
+        <form action="" method="POST">
+            {%  csrf_token %}
+            {{ Stud_Form }}
+            <br>
+            <input type="search">
+        </form>
+    
+        <h1>Student Name:</h1>
+        <ul>
+            {% for x in mymem %}
+                <li>{{ x.name }} - {{ x.deaprtment }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+{% endblock %}

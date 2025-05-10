@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <h1>Result</h1>
+    <h4>Pass:</h4>
+    <ul>
+        {% for stud in pass %}
+            <li>{{ stud }}</li>
+        {% empty %}
+            <p>No Student Passed</p>
+        {% endfor %}
+    </ul>
+    <br>
+    <h4>Fail:</h4>
+    <ul>
+        {% for stud in fail %}
+            <li>{{ stud }}</li>
+        {% empty %}
+            <p>No Student Failed</p>
+        {% endfor %}
+    </ul>
+</body>
+{% endblock %}

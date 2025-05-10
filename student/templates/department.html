@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <h1>Department</h1>
+    <h4>Bsc:</h4>
+    <ul>
+        {% for n in bsc %}
+            <li>{{ n }}</li>
+        {% empty %}
+            <p>No Students</p>
+        {% endfor %}
+    </ul>
+    <br>
+    <h4>B.Com:</h4>
+    <ul>
+        {% for n in bcom %}
+            <li>{{ n }}</li>
+        {% empty %}
+            <p>No Students</p>
+        {% endfor %}
+    </ul>
+    <br>
+    <h4>Bba:</h4>
+    <ul>
+        {% for n in bba %}
+            <li>{{ n }}</li>
+        {% empty %}
+            <p>No Students</p>
+        {% endfor %}
+    </ul>
+    <br>
+</body>
+{% endblock %}
