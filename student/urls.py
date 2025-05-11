@@ -18,4 +18,4 @@ urlpatterns=[
     path('logout/',views.log_out,name='logout'),
     path('register/',views.register, name='register'),
     path('contact/',views.contact,name='contact'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
