@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
+    'cloudinary_storage',
     'student'
 ]
 
@@ -126,5 +128,14 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Logs out user when browser is closed
 #SESSION_COOKIE_AGE = 60  # Auto logout after 5 minutes of inactivity
 #SESSION_SAVE_EVERY_REQUEST = True  # Refresh session expiration on every request
 
-MEDIA_URL='/media/'
-MEDIA_ROOT=BASE_DIR / 'media'
+#MEDIA_URL='/media/'
+#MEDIA_ROOT=BASE_DIR / 'media'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
+
