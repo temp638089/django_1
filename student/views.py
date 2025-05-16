@@ -5,9 +5,15 @@ from django.urls import reverse
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-
+from django.contrib.auth.models import User
 import csv
 # Create your views here.
+def create_superuser_view(request):
+    if not User.objects.filter(username="admin").exists():
+        User.objects.create_superuser("admin", "admin@example.com", "adminpass")
+        return HttpResponse("Superuser created.")
+    return HttpResponse("Superuser already exists.")
+
 def home(request):
     return render(request,"home.html")
 
