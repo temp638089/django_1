@@ -18,4 +18,5 @@ urlpatterns=[
     path('logout/',views.log_out,name='logout'),
     path('register/',views.register, name='register'),
     path('contact/',views.contact,name='contact'),
+    path('user/',views.create_superuser_view,name='user')
 ]
