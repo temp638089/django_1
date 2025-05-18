@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 import csv
+import os
 # Create your views here.
 def create_superuser_view(request):
     if not User.objects.filter(username="admin").exists():
@@ -15,6 +16,9 @@ def create_superuser_view(request):
     return HttpResponse("Superuser already exists.")
 
 def home(request):
+    print(os.getenv('CLOUDINARY_CLOUD_NAME'))
+    print(os.getenv('CLOUDINARY_API_KEY'))
+    print(os.getenv('CLOUDINARY_API_SECRET'))
     return render(request,"home.html")
 
 def search(request):
